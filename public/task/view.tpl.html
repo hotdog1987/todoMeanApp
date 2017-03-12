@@ -1,0 +1,33 @@
+<h3 class="text-center">View Tasks</h3>
+
+<table class="table table-striped table-responsive table-bordered" data-ng-if="viewTaskCtrl.tasks.length !== 0">
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Description</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="task in viewTaskCtrl.tasks">
+                <td>
+                    <span data-ng-bind="task.taskTitle" data-ng-show="viewTaskCtrl.editList[$index]"></span>
+                    <input type="text" id="taskTitle_{{$index}}" name="taskTitle_{{$index}}" data-ng-model="task.taskTitle" 
+                                data-ng-show="!viewTaskCtrl.editList[$index]" />
+                </td>
+                <td>
+                    <span data-ng-bind="task.taskDesc" data-ng-show="viewTaskCtrl.editList[$index]"></span>
+                    <input type="text" id="taskDesc_{{$index}}" name="taskDesc_{{$index}}" data-ng-model="task.taskDesc" 
+                                data-ng-show="!viewTaskCtrl.editList[$index]" />
+                </td>
+                <td>
+                    <a href="#" data-ng-click="viewTaskCtrl.editTask($event,task)"  data-ng-show="!viewTaskCtrl.editList[$index]">
+                        <i class="glyphicon glyphicon-floppy-save"></i>
+                    </a>
+                    <a href="#" data-ng-click="viewTaskCtrl.deleteTask($event,task)"  data-ng-show="!viewTaskCtrl.editList[$index]">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>

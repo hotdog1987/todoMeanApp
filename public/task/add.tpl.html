@@ -1,0 +1,21 @@
+<h3 class="text-center">Add Task</h3>
+
+<div class="alert alert-success" data-ng-if="addTaskCtrl.isSuccess">
+    <strong data-ng-bind="addTaskCtrl.successMessage"></strong>
+</div>
+
+<form name="addTaskCtrl.form" novalidate data-ng-submit="addTaskCtrl.submit(addTaskCtrl.task)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" class="form-control" data-ng-model="addTaskCtrl.task.title" required/>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" class="form-control" data-ng-model="addTaskCtrl.task.description" required></textarea>
+    </div>
+    <br>
+
+    <button type="reset" class="btn btn-danger">Cancel</button>
+    <button type="submit" class="btn btn-success" data-ng-disabled="addTaskCtrl.form.$invalid">Create Task</button>
+    <a ui-sref="viewTasks" class="btn btn-primary">View Tasks</a>
+</form>

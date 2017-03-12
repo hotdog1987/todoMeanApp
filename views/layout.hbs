@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    
+    {{!--common styles--}}
+    <link rel='stylesheet' href='/common/stylesheets/style.css' />
+  </head>
+  <body ng-app="todoApp">
+    {{{body}}}
+
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    
+    {{!--common modules--}}
+    <script src="/common/javascripts/app.js"></script>
+    <script src="/common/javascripts/APIService.js"></script>
+    <script src="/common/javascripts/URLFactory.js"></script>
+    <script src="/common/javascripts/UserFactory.js"></script>
+
+    {{!--createUsers--}}
+    <script src="/createUsers/CreateUsersController.js"></script>
+
+    {{!--Login--}}
+    <script src="/login/LoginController.js"></script>
+
+    {{!--main--}}
+    <script src="/main/mainController.js"></script>
+
+    {{!--addTask--}}
+    <script src="/task/addTaskController.js"></script>
+
+    {{!--viewTask--}}
+    <script src="/task/viewTaskController.js"></script>
+  </body>
+</html>
