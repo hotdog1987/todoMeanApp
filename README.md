@@ -1,3 +1,6 @@
+
+# todoMeanApp
+This is the Todo list app in complete MEAN stack.
 users
 
 roles: read access and write access
