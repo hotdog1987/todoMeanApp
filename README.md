@@ -1,24 +1,29 @@
 
 # todoMeanApp
 This is the Todo list app in complete MEAN stack.
-users
 
-roles: read access and write access
+What it should do?
+3 Users:
+UserOne, UserTwo and UserThree with permissions as r/w, r, r/w respectively.
 
-todo list of users
-
-3 users:
-
-1. user who logs in is owner of task he creates
-2. Logged in user creates task.
-3. Assigns another user #2 read access and assigns user #3 r/w access
-4. User #2 can only read the task created by #1
-5. User #3 can make changes to the tasks.
+1. UserOne can create, update, delete tasks
+2. UserTwo can only read the task created by other users
+3. UserThree can make changes to the tasks.
+4. Initial load of the page will let you create users in mongodb once. 
 
 Angular:
+1st page: 
+To create users in db
 
-1st page: New task page -> new state to create task
-Task list: 
-1. Add new task
-2. Click on a task to edit it. Title and description are editable
+2nd page:
+For login users
+
+3rd page:
+For selection whether to view the tasks or create/view tasks
+
+4th page:
+For adding a task
+
+5th page:
+For viewing/updating tasks
 
